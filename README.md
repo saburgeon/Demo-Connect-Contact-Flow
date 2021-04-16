@@ -42,5 +42,6 @@ You would then import the Amazon Connect Contact Flow into your own project. Onc
 https://www.serverless.com/framework/docs/providers/aws/cli-reference/deploy/
 https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html
 serverless - npm (npmjs.com)
-Import/export contact flows - Amazon Connect![image](https://user-images.githubusercontent.com/23618084/115043195-3e2d9f80-9ea2-11eb-9f54-dca493ebfbb4.png)
+Import/export contact flows - Amazon Connect
+
 
