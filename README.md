@@ -29,7 +29,7 @@ CloudFormation was used as the deployment package, and deployment is done via th
  
 npm install serverless -g
  
-This will allow the serverless package to be installed globally. Using the AWS CLI, configure the account so that the account to be used is logged in:
+This will allow the serverless package to be installed globally. Using the AWS CLI, configure the account so that the account to be used is logged in (please refer to the documentation below for setup that requires access keys):
  
 aws configure
  
@@ -47,4 +47,6 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html
 https://www.npmjs.com/package/serverless
 
 https://docs.aws.amazon.com/connect/latest/adminguide/contact-flow-import-export.html
+
+For downloading the AWS CLI: https://aws.amazon.com/cli/
 
