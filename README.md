@@ -15,3 +15,5 @@ The root account was used for the user profile as opposed to creating a user wit
  
 Given more time, the web application would have been built in the super bonus section, in addition to additional routing  and options for the Amazon Connect workflow. This was certainly a fascinating project with many possibilities for a high level of dynamism. I would have loved to demonstrate more of the functionality that Amazon Connect has to provide, such as having the user select from a list of options, have the ability to choose how many vanity numbers are created, and provide to the user the total entries that have been appended to the DynamoDB table.
 
+
+![image](https://user-images.githubusercontent.com/23618084/115039883-dc1f6b00-9e9e-11eb-843f-de76e79cb771.png)
