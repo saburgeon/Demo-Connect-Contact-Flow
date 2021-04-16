@@ -1,0 +1,54 @@
+service: demo-connect-contact-flow
+
+disabledDeprecations: '*' #Disable The Depreciation Logs that comes when deploying via serverless command
+
+#frameworkVersion: '2' # You can pin your service to only deploy with a specific Serverless version
+
+custom:
+  tablePrefix: dccf
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, dev}
+  region: us-east-1
+  lambdaHashingVersion: 20201221
+  iam:
+    role:
+      statements: # permissions for all of your functions can be set here
+        - Effect: Allow
+          Action: # Gives permission to DynamoDB tables in a specific region
+            - dynamodb:DescribeTable
+            - dynamodb:Query
+            - dynamodb:Scan
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+          Resource: 'arn:aws:dynamodb:us-east-1:*:*'
+
+
+functions:
+  storeVanityNumbers:
+    name: "${self:custom.tablePrefix}-vanityNumbers-store-in-DynamoDB-${self:provider.stage}" 
+    description: Lambda Function that will generate the Vanity Numbers based on the input phone number and store it in DynamoDb Table
+    handler: handler.main
+    environment: 
+      DYNAMODB_BEST_VANITY_NUMBER_TABLE: !Ref bestVanityNumbers
+
+resources:
+  Resources:
+    bestVanityNumbers:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.tablePrefix}-best-vanity-numbers-${self:provider.stage}
+        BillingMode: PROVISIONED
+        AttributeDefinitions:
+        - AttributeName: phoneNumber
+          AttributeType: S
+        KeySchema:
+        - AttributeName: phoneNumber
+          KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
