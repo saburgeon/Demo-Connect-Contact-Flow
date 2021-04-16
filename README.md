@@ -40,13 +40,13 @@ serverless deploy
 You would then import the Amazon Connect Contact Flow into your own project. Once you log into your Amazon Connect Instance, the Demo Connect Lambda file listed in the project would be used for import. The lamda function would have to be changed, which is done through the AWS console under Amazon Connect. Once assigning the lambda function that was created using the serverless package for deployment, the phone number would then be assigned to the contact flow.
 
 ### Documentation
-https://www.serverless.com/framework/docs/providers/aws/cli-reference/deploy/
+Serverless Documentation: https://www.serverless.com/framework/docs/providers/aws/cli-reference/deploy/
 
-https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html
+AWS CLI configuration: https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html
 
-https://www.npmjs.com/package/serverless
+Serverless NPM package: https://www.npmjs.com/package/serverless
 
-https://docs.aws.amazon.com/connect/latest/adminguide/contact-flow-import-export.html
+Amazon Connect Contact Flow Import Instructions: https://docs.aws.amazon.com/connect/latest/adminguide/contact-flow-import-export.html
 
 For downloading the AWS CLI: https://aws.amazon.com/cli/
 
