@@ -50,3 +50,5 @@ Amazon Connect Contact Flow Import Instructions: https://docs.aws.amazon.com/con
 
 For downloading the AWS CLI: https://aws.amazon.com/cli/
 
+Video on How to Import Amazon Connect Contact Flow: https://drive.google.com/file/d/1mHCaE-LgjQdasBKGOc9RKw0ynKBh7RzR/view
+
